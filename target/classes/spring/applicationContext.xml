@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="AchievementEngine" class ="kolz.achievementsystem.achievements.AchievementEngine" >
+      <property name="achievements">
+        <list>
+          <ref bean="bruiserAchievement"/>
+          <ref bean="bigWinnerAchievement"/>
+          <ref bean="quitterAchievement"/>
+          <ref bean="sharpShooterAchievement"/>
+          <ref bean="veteranAchievement"/>
+        </list>
+      </property>
+   </bean>
+
+   <bean id="bruiserAchievement" class="kolz.achievementsystem.achievements.BruiserAchievement" />
+   <bean id="bigWinnerAchievement" class="kolz.achievementsystem.achievements.BigWinnerAchievement" />
+   <bean id="quitterAchievement" class="kolz.achievementsystem.achievements.QuitterAchievement" />
+   <bean id="sharpShooterAchievement" class="kolz.achievementsystem.achievements.SharpShooterAchievement" />
+   <bean id="veteranAchievement" class="kolz.achievementsystem.achievements.VeteranAchievement" />
+    
+</beans>
